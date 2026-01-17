@@ -2,7 +2,6 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
@@ -42,25 +41,25 @@ int main() {
     // ===== ENTRADA CARTA 1 =====
     printf("Cadastro da Carta 1\n");
 
-    printf("Digite uma letra de 'A' a 'H' para representar o estado: ");
+    printf("Digite uma letra de 'A' a 'H' para representar o estado:\n");
     scanf(" %c", &estado1);
 
-    printf("Digite o código da carta, utilizando a letra escolhida seguida de um número de 01 a 04 (ex: A01): ");
+    printf("Digite o código da carta, utilizando a letra escolhida seguida de um número de 01 a 04 (ex: A01):\n");
     scanf("%s", codigo1);
 
-    printf("Digite o nome da cidade: ");
+    printf("Digite o nome da cidade:\n");
     scanf(" %[^\n]", cidade1);
 
-    printf("Digite o número de habitantes da cidade: ");
+    printf("Digite o número de habitantes da cidade:\n");
     scanf("%ld", &populacao1);
 
-    printf("Digite a área da cidade (em km²): ");
+    printf("Digite a área da cidade (em km²):\n");
     scanf("%f", &area1);
 
-    printf("Digite o PIB (produto interno bruto) da cidade em bilhões de reais: ");
+    printf("Digite o PIB (produto interno bruto) da cidade em bilhões de reais:\n");
     scanf("%f", &pib1);
 
-    printf("Digite o número de pontos turísticos da cidade: ");
+    printf("Digite o número de pontos turísticos da cidade:\n");
     scanf("%d", &pontos1);
 
     densidade1 = populacao1 / area1;
@@ -72,25 +71,25 @@ int main() {
     // ===== ENTRADA CARTA 2 =====
     printf("Cadastro da Carta 2\n");
 
-    printf("Digite uma letra de 'A' a 'H' para representar o estado: ");
+    printf("Digite uma letra de 'A' a 'H' para representar o estado:\n");
     scanf(" %c", &estado2);
 
-    printf("Digite o código da carta, utilizando a letra escolhida seguida de um número de 01 a 04 (ex: B02): ");
+    printf("Digite o código da carta, utilizando a letra escolhida seguida de um número de 01 a 04 (ex: B02):\n");
     scanf("%s", codigo2);
 
-    printf("Digite o nome da cidade: ");
+    printf("Digite o nome da cidade:\n");
     scanf(" %[^\n]", cidade2);
 
-    printf("Digite o número de habitantes da cidade: ");
+    printf("Digite o número de habitantes da cidade:\n");
     scanf(" %ld", &populacao2);
 
-    printf("Digite a área da cidade (em km²): ");
+    printf("Digite a área da cidade (em km²):\n");
     scanf(" %f", &area2);
 
-    printf("Digite o PIB (produto interno bruto) da cidade: ");
+    printf("Digite o PIB (produto interno bruto) da cidade:\n");
     scanf(" %f", &pib2);
 
-    printf("Digite o número de pontos turísticos da cidade: ");
+    printf("Digite o número de pontos turísticos da cidade:\n");
     scanf(" %d", &pontos2);
 
     densidade2 = populacao2 / area2;
@@ -145,7 +144,16 @@ int main() {
     printf("Densidade populacional: Carta 1 venceu? %d\n", densidade);
     printf("PIB per capita: Carta 1 venceu? %d\n", pib_per_capita);
     printf("Super poder: Carta 1 venceu? %d\n", super_poder);
+   
+    // Comparação utilizando estrutura IF e ELSE  
+   
+    printf("\n Comparação do atributo área em km²: \n");
 
+    if(area1 > area2) {
+      printf("Carta 1 venceu com área de %.2f km²\n", area1);      
+    } else{
+      printf("Carta 2 venceu com área de %.2f km²\n", area2);
+    }
     // Fim do programa
 
 
